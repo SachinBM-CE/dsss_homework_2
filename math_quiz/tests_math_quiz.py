@@ -10,14 +10,14 @@ class TestMathGame(unittest.TestCase):
         for _ in range(1000):  # Test a large number of random values
             rand_num = generate_random_integer(min_val, max_val)
             self.assertTrue(min_val <= rand_num <= max_val)
-        print("Random integer generator function is successful")
+        print("Test on Random Integer Generator is successful")
 
     def test_generate_operator(self):
         # Test the return value of generate_operator
         operators = {'+', '-', '*'}
         result = generate_operator()
         self.assertTrue(result in operators)
-        print("Random operator generator function is successful")
+        print("Test on Random Operator Generator is successful")
 
     def test_perform_arithmetic_operation(self):
         # Test perform_arithmetic_operation with multiple test cases
@@ -27,7 +27,7 @@ class TestMathGame(unittest.TestCase):
             problem, answer = perform_arithmetic_operation(num1, num2, operator)
             self.assertEqual(problem, expected_problem)
             self.assertEqual(answer, expected_answer)
-        print("Arithmetic operation performing function is successful")
+        print("Test performing arithmetic operations is successful")
 
 if __name__ == "__main__":
     unittest.main()
